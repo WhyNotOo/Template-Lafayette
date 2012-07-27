@@ -49,7 +49,7 @@
         }
       },
       "form": [
-        "datasources.brands"
+        "datasources.brands",
         {
           "key": "abouthtml",
           "type": "textarea"
