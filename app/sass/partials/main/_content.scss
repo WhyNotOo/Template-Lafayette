@@ -44,10 +44,11 @@ body,
 			position:relative;
 			width:43%;
 			float:left;
-			margin:0 4% 20px 0;
+			margin:0 4% 4% 0;
 			border:2px dashed #333;
 			padding:2%;
 			cursor:pointer;
+			background:#fff;
 
 			img {
 				max-width:100%;
@@ -116,8 +117,6 @@ body,
 		#brands {
 			.brand {
 				width:26%;
-				margin:0 4% 20px 0;
-				padding:2%;
 
 				&:nth-of-type(3n+3) {
 					margin-right:0;
@@ -136,9 +135,7 @@ body,
 	#main {
 		#brands {
 			.brand {
-				width:19%;
-				margin:0 2% 20px 0;
-				padding:2%;
+				width:17%;
 
 				&:nth-of-type(4n+4) {
 					margin-right:0;
@@ -157,9 +154,7 @@ body,
 	#main {
 		#brands {
 			.brand {
-				width:14%;
-				margin:0 2% 20px 0;
-				padding:2%;
+				width:12%;
 
 				&:nth-of-type(5n+5) {
 					margin-right:0;
