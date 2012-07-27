@@ -13,8 +13,8 @@
   },
   "joshfire": {
     "images": {
-      "small": "marketing/logo-small.jpg",
-      "big": "marketing/logo-big.jpg"
+      "small": "marketing/logo_small.jpg",
+      "big": "marketing/logo_big.jpg"
     },
     "premium": false,
     "devices": [
@@ -42,17 +42,17 @@
     },
     "options": {
       "schema": {
-        "abouthtml": {
+        "backgroundimage": {
           "type": "string",
-          "title": "About page",
-          "description": "Text that will appear in the About page. You may use HTML markup."
+          "title": "Your custom background image",
+          "description": "Choose a custom background image for your application"
         }
       },
       "form": [
         "datasources.brands",
         {
-          "key": "abouthtml",
-          "type": "textarea"
+          "key": "backgroundimage",
+          "type": "text"
         }
       ]
     },

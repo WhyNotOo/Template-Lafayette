@@ -15,6 +15,8 @@
 	<link rel="stylesheet" href="style.css">
 
 	<script src="js/vendor/modernizr-2.5.3.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
 
 	<script data-joshfire-bootstrap src="http://preview.joshfireapps.com/bootstrap/5012648b647dd20200008d31/auto/phone/"></script>
 </head>
@@ -23,35 +25,24 @@
 
 	<section id="container" role="container">
 
-		<header class="site-header" role="banner">
-
+		<header class="app-header" role="banner">
+			<article class="logo"></article>
 		</header>
 
-		<section id="main" role="main">
-			<section id="content" class="site-content">
-
+		<section id="main" class="clearfix" role="main">
+			<article class="loader"></article>
+			<section id="brands" class="clearfix invisible">
+				<ul class="clearfix"></ul>
 			</section>
-
-			<aside class="widget-area" role="complementary">
-
-			</aside>
 		</section>
-
-		<footer class="site-footer" role="contentinfo">
-
-		</footer>
-
 
 	</section>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
-
 	<!-- compressed and minified scripts -->
-	<script src="js/plugins.js"></script>
 	<script src="js/script.js"></script>
 
 	<!-- required scripts -->
+	<script src="js/vendor/iscroll.js"></script>
 	<script src="js/vendor/nwmatcher-1.2.5-min.js"></script>
 	<!--[if (gte IE 6)&(lte IE 8)]>
 		<script src="js/vendor/selectivizr-min.js"></script>

@@ -1,10 +1,18 @@
 /*
  * Header style
  */
-.site-header {
+.app-header {
 	position:absolute;
 	top:0;
 	left:0;
-	height:50px;
-	background:#090;
+	right:0;
+	height:20%;
+
+	.logo {
+		width:80%;
+		height:100%;
+		margin:0 auto;
+		background:no-repeat center center;
+		background-size:contain;
+	}
 }

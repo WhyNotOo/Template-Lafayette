@@ -5,17 +5,17 @@
 /* 	CLEARFIX
 	http://nicolasgallagher.com/micro-clearfix-hack/
 	----------------- */
-.clearfix:before, 
-.clearfix:after { 
-	content: ""; 
-	display: table; 
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
 }
 
-.clearfix:after { 
-	clear: both; 
+.clearfix:after {
+	clear: both;
 }
 
-.clearfix { 
+.clearfix {
 	*zoom: 1;
 }
 
@@ -32,50 +32,50 @@
 
 /* 	IMAGE REPLACEMENT
 	----------------- */
-.ir { 
-	border:0; 
-	font: 0/0 a; 
-	text-shadow: none; 
-	color: transparent; 
-	background-color: transparent; 
+.ir {
+	border:0;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	background-color: transparent;
 }
 
 /* 	HIDE/SHOW ELEMENT
 	----------------- */
-.hide { 
-	display: none; 
-	visibility: hidden; 
+.hidden {
+	display: none;
+	visibility: hidden;
 }
 
-.show { 
+.show {
 	display: block;
 	visibility: visible;
 }
 
-.invisible { 
-	visibility: hidden; 
+.invisible {
+	visibility: hidden;
 }
 
-.visuallyhidden { 
-	border: 0; 
-	clip: rect(0 0 0 0); 
-	height: 1px; 
-	margin: -1px; 
-	overflow: hidden; 
-	padding: 0; 
-	position: absolute; 
-	width: 1px; 
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
 .visuallyhidden.focusable {
 	&:active,
 	&:focus {
-		clip: auto; 
+		clip: auto;
 		height: auto;
-		margin: 0; 
-		overflow: visible; 
-		position: static; 
-		width: auto; 
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
 	}
 }
 
@@ -102,16 +102,16 @@
 
 /* 	QUICK FLOAT
 	----------------- */
-.fr { 
+.fr {
 	@include float(right);
 }
 
-.fl { 
-	@include float(left); 
+.fl {
+	@include float(left);
 }
 
-.fn { 
-	@include reset-float; 
+.fn {
+	@include reset-float;
 }
 
 /* 	TEXT ALIGNMENT
@@ -139,7 +139,7 @@ hr {
 	height: 1px;
 	margin: rhythm() 0;
 	min-height: 0;
-	
+
 	&.dotted {
 		border-style: dotted;
 	}
@@ -156,24 +156,24 @@ hr {
 
 /* 	MISC CLASSES
 	----------------- */
-.first { 
-	margin-left: 0; 
-	padding-left: 0; 
+.first {
+	margin-left: 0;
+	padding-left: 0;
 }
 
-.last { 
+.last {
 	margin-right: 0;
 	padding-right: 0;
 }
 
-.top { 
-	margin-top: 0; 
-	padding-top: 0; 
+.top {
+	margin-top: 0;
+	padding-top: 0;
 }
 
-.bottom { 
-	margin-bottom: 0; 
-	padding-bottom: 0; 
+.bottom {
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 /* 	Text meant only for screen readers
