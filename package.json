@@ -1,0 +1,453 @@
+{
+  "name": "quiz-tennis",
+  "version": "2.0.0",
+  "fullName": "Quiz about Tennis",
+  "description": "Create your own quizzes applications with the Quiz template! Works on iOS/Android mobiles and tablets.\n\nThe template is designed to run fullscreen in portrait mode on mobile devices and landscape mode on tablets, typically in a packaged application. It will adjust the layout to some extent when run in a Web browser.\n\nDue to the use of specific device capabilities, the right pane preview is not available for this template. Please test the template directly on mobile/tablet devices.\n\nThe template takes a list of quizzes as input (up to 10) from a set of QTI datasources or a set of Google spreadsheets. Questions must have only one correct answer, and should not propose more than 6 choices for possible answers. Quizzes defined in a spreadsheet must follow the following rules:\n1/ one question per row,\n2/ first row contains the columns headers,\n3/ the question label must be defined in a \"Question\" column,\n4/ the URL of an image to display alongside the question may be given in an \"Image\" column,\n5/ choices must be listed in \"ChoiceX\" columns where X ranges from 1 to 6,\n6/ the right answer must be defined in an \"Answer\" column, set to the index of the correct answer, in other words a number from 1 to 6.\n\nQuestion images should be at least 200x200. Square images are preferred but not mandatory. Two questions in a same quiz may propose a different number of choices, simply leave out the \"choiceX\" columns that you do not need.",
+  "keywords": [
+    "quiz",
+    "questions",
+    "training",
+    "culture"
+  ],
+  "author": {
+    "name": "Joshfire"
+  },
+  "joshfire": {
+    "images": {
+      "small": "marketing/image-small.png",
+      "big": "marketing/image-big.png"
+    },
+    "premium": true,
+    "prices": {
+      "phone": {
+        "devices": [
+          "phone"
+        ],
+        "onetime": {
+          "eur": 49,
+          "usd": 59
+        }
+      },
+      "tablet": {
+        "devices": [
+          "tablet"
+        ],
+        "onetime": {
+          "eur": 59,
+          "usd": 69
+        }
+      },
+      "all": {
+        "devices": [
+          "tablet",
+          "phone"
+        ],
+        "onetime": {
+          "eur": 79,
+          "usd": 99
+        }
+      }
+    },
+    "devices": [
+      {
+        "devices": "phone",
+        "startfile": "app/index.mobile.min.html",
+        "orientation": "portrait",
+        "images": "marketing/screenshot-phone.png",
+        "screenshots": [
+          "marketing/phone-ss1.jpg",
+          "marketing/phone-ss2.jpg",
+          "marketing/phone-ss3.jpg"
+        ],
+        "disablePreview": true
+      },
+      {
+        "devices": "tablet",
+        "startfile": "app/index.tablet.min.html",
+        "orientation": "landscape",
+        "images": "marketing/screenshot-tablet.png",
+        "screenshots": [
+          "marketing/tablet-ss1.jpg",
+          "marketing/tablet-ss2.jpg",
+          "marketing/tablet-ss3.jpg"
+        ],
+        "disablePreview": true
+      }
+    ],
+    "datasources": {
+      "quizzes": {
+        "title": "Quiz",
+        "description": "QTI or spreadsheet. See template description for details.",
+        "multiple": true,
+        "inputTypeRequired": true,
+        "inputType": [
+          "CreativeWork/QuizQuestion"
+        ]
+      }
+    },
+    "options": {
+      "schema": {
+        "language": {
+          "title": "Language",
+          "type": "string",
+          "enum": [
+            "English",
+            "French",
+            "German"
+          ],
+          "default": "English"
+        },
+        "colors": {
+          "title": "Application colors",
+          "type": "object",
+          "properties": {
+            "topnavbarcolor": {
+              "title": "Specify a color for the top Navbar in Hexa. Default to dark grey. ",
+              "type": "string",
+              "format": "color",
+              "default": "#A9A9A9"
+            },
+            "textcolor": {
+              "title": "Specify a color for the main text. Default to white. ",
+              "type": "string",
+              "format": "color",
+              "default": "#ffffff"
+            }
+          }
+        },
+        "saveprofileurl": {
+          "title": "API endpoint for saving profile",
+          "type": "string",
+          "format": "url"
+        },
+        "savescoreurl": {
+          "title": "API endpoint for saving score",
+          "type": "string",
+          "format": "url"
+        },
+        "promotiontext": {
+          "title": "Text to invite offers subscription",
+          "description": "Example: Sign up for our special offers and newsletters",
+          "type": "string"
+        },
+        "termstext": {
+          "title": "Text to ask terms agreement",
+          "description": "Example: I agree to YOUR_BRAND <a href=\"URL\" target=\"_blank\">Terms &amp; Conditions</a> and <a href=\"URL2\" target=\"_blank\">Privacy Policy</a>",
+          "type": "string"
+        },
+        "timelimit": {
+          "title": "Countdown",
+          "description": "Maximum time allowed per question (in seconds)",
+          "type": "number",
+          "default": 15
+        },
+        "messages": {
+          "title": "Application messages",
+          "type": "object",
+          "properties": {
+            "quarter1": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "title": "The title of the message",
+                  "description": "Something like \"Ouch!\" or \"Too bad...\"",
+                  "type": "string"
+                },
+                "message": {
+                  "title": "A message for the user",
+                  "description": "Longer message to bash the user (optional)",
+                  "type": "string"
+                }
+              }
+            },
+            "quarter2": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "title": "The title of the message",
+                  "description": "Something like \"Close enough!\" or \"Not bad.\"",
+                  "type": "string"
+                },
+                "message": {
+                  "title": "A message for the user",
+                  "description": "Longer message to confort the user (optional)",
+                  "type": "string"
+                }
+              }
+            },
+            "quarter3": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "title": "The title of the message",
+                  "description": "Something like \"Good Job!\" or \"Well done.\"",
+                  "type": "string"
+                },
+                "message": {
+                  "title": "A message for the user",
+                  "description": "Longer message to congratulate the user (optional)",
+                  "type": "string"
+                }
+              }
+            },
+            "quarter4": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "title": "The title of the message",
+                  "description": "Something like \"Congrats!\" or \"You are the best.\"",
+                  "type": "string"
+                },
+                "message": {
+                  "title": "A message for the user",
+                  "description": "Longer message to congratulate the user (optional)",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "images": {
+          "title": "Background images",
+          "type": "object",
+          "properties": {
+            "splashscreenphone": {
+              "title": "Splashscreen for the phone",
+              "description": "URL of the image. Image must be minimum 1024x768.",
+              "type": "string"
+            },
+            "phone": {
+              "title": "Mobile background",
+              "description": "URL of the image. Image must be 640x1140. Optional, default image used when empty.",
+              "type": "string"
+            },
+            "splashscreentablet": {
+              "title": "Splashscreen for the tablet",
+              "description": "URL of the image. Image must be minimum 640x1140.",
+              "type": "string"
+            },
+            "tablet": {
+              "title": "Tablet background",
+              "description": "URL of the image. Image must be 1024x768. Optional, default image used when empty.",
+              "type": "string"
+            }
+          }
+        },
+        "quizzesMeta": {
+          "title": "Quizzes metadata",
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "title": "Quiz configuration",
+              "properties": {
+                "desc": {
+                  "title": "Description",
+                  "description": "Short description of the quiz",
+                  "type": "string"
+                },
+                "image": {
+                  "title": "Image",
+                  "description": "Default image for questions. Others need to be precised in the spreadsheet. Image should be a square, 200x200 at least",
+                  "type": "string"
+                },
+                "questionmax": {
+                  "title": "How many question?",
+                  "description": "Number of random question you want to display.",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "abouthtml": {
+          "type": "string",
+          "title": "About page",
+          "description": "Text that will appear in the About page. You may use HTML markup."
+        }
+      },
+      "form": [
+        {
+          "type": "fieldset",
+          "legend": "Main settings",
+          "items": [
+            {
+              "type": "selectfieldset",
+              "title": "Collect users profile information?",
+              "items": [
+                {
+                  "type": "optionfieldset",
+                  "legend": "No"
+                },
+                {
+                  "type": "optionfieldset",
+                  "legend": "Yes",
+                  "items": [
+                    "saveprofileurl",
+                    "savescoreurl",
+                    "promotiontext",
+                    "termstext"
+                  ]
+                }
+              ]
+            },
+            "language",
+            "timelimit"
+          ]
+        },
+        {
+          "type": "fieldset",
+          "legend": "Specify color for your application",
+          "items": [
+            "colors.topnavbarcolor",
+            "colors.textcolor"
+          ]
+        },
+        {
+          "type": "fieldset",
+          "legend": "1st quarter quiz results messages",
+          "items": [
+            "messages.quarter1.title",
+            "messages.quarter1.message"
+          ]
+        },
+        {
+          "type": "fieldset",
+          "legend": "2nd quarter quiz results messages",
+          "items": [
+            "messages.quarter2.title",
+            "messages.quarter2.message"
+          ]
+        },
+        {
+          "type": "fieldset",
+          "legend": "3rd quarter quiz results messages",
+          "items": [
+            "messages.quarter3.title",
+            "messages.quarter3.message"
+          ]
+        },
+        {
+          "type": "fieldset",
+          "legend": "4th quarter quiz results messages",
+          "items": [
+            "messages.quarter4.title",
+            "messages.quarter4.message"
+          ]
+        },
+        {
+          "type": "fieldset",
+          "legend": "Background images",
+          "items": [
+            "images.splashscreenphone",
+            "images.phone",
+            "images.splashscreentablet",
+            "images.tablet"
+          ]
+        },
+        {
+          "type": "fieldset",
+          "legend": "About the application",
+          "items": [
+            {
+              "key": "abouthtml",
+              "type": "wysihtml5",
+              "description": "Text that will appear in the About page."
+            }
+          ]
+        },
+        {
+          "type": "tabarray",
+          "items": [
+            {
+              "type": "fieldset",
+              "legend": "Quiz {{idx}}",
+              "items": [
+                {
+                  "key": "datasources.quizzes[]",
+                  "title": "Quiz (QTI or spreadsheet)"
+                },
+                "quizzesMeta[].desc",
+                "quizzesMeta[].image",
+                "quizzesMeta[].questionmax"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "libraries": [
+      {
+        "name": "Async.js",
+        "homepage": "https://github.com/caolan/async",
+        "description": "Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript. Although originally designed for use with node.js, it can also be used directly in the browser.",
+        "repositories": [
+          {
+            "type": "git",
+            "url": "https://github.com/caolan/async.git"
+          }
+        ],
+        "licenses": [
+          {
+            "type": "MIT",
+            "url": "license-async.txt"
+          }
+        ]
+      },
+      {
+        "name": "jQuery",
+        "homepage": "http://jquery.com",
+        "description": "jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.",
+        "repositories": [
+          {
+            "type": "git",
+            "url": "https://github.com/jquery/jquery.git"
+          }
+        ],
+        "licenses": [
+          {
+            "type": "MIT",
+            "url": "license-jquery.txt"
+          }
+        ]
+      },
+      {
+        "name": "jQuery Mobile",
+        "homepage": "http://jquerymobile.com",
+        "description": "A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation. Its lightweight code is built with progressive enhancement, and has a flexible, easily themeable design.",
+        "repositories": [
+          {
+            "type": "git",
+            "url": "https://github.com/jquery/jquery-mobile.git"
+          }
+        ],
+        "licenses": [
+          {
+            "type": "MIT",
+            "url": "license-jquerymobile.txt"
+          }
+        ]
+      },
+      {
+        "name": "Sizzle",
+        "homepage": "http://sizzlejs.com",
+        "description": "A pure-JavaScript CSS selector engine designed to be easily dropped in to a host library.",
+        "repositories": [
+          {
+            "type": "git",
+            "url": "https://github.com/jquery/sizzle.git"
+          }
+        ],
+        "licenses": [
+          {
+            "type": "MIT",
+            "url": "license-sizzle.txt"
+          }
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "grunt-css": "~0.2.1"
+  }
+}
