@@ -20,7 +20,7 @@ var app = {
 	      } else {
 	        $.map(data.entries, function (entry, idx) {
 	          var brand = entry;
-	          $('#brands').append('<article class="brand"><p class="img" style="background-image: url('+brand['gsx:image']+');"</p><h2>'+brand.name+'</h2></article>')
+	          $('#brands').append('<article class="brand" data-url="'+brand['gsx:url']+'"><p class="img" style="background-image: url('+brand['gsx:image']+');"</p><h2>'+brand.name+'</h2></article>')
 	        });
 	        app.resizeItem();
 	      }
@@ -51,7 +51,7 @@ var app = {
   },
 
   addCustomConfig: function() {
-    if(config.icon) { }
+    if(config.icon) {  }
 
     if(config.logo) {
     	$('.app-header .logo').css('background-image', 'url('+Joshfire.factory.config.app.logo.contentURL+')');
@@ -59,6 +59,10 @@ var app = {
 
     if(options.backgroundimage) {
     	$('#container').css('background-image', 'url('+options.backgroundimage+')');
+    }
+
+    if(options.backgroundheader) {
+      $('.app-header').css('background', options.backgroundheader);
     }
 
     app.searchBrands();
@@ -81,6 +85,10 @@ var app = {
 
 
 // --- ACTIONS --- \\
+$('.brand').live('click', function() {
+  var url = $(this).attr('data-url');
+  console.log(url);
+});
 
 
 

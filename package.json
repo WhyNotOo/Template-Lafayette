@@ -1,10 +1,10 @@
 {
-  "name": "lafayette",
+  "name": "Dashboard Icons",
   "version": "1.0",
-  "fullName": "Lafayette brands",
+  "fullName": "",
   "description": "Add custom description",
   "keywords": [
-    "lafayette",
+    "icons",
     "brands",
     "shopping"
   ],
@@ -46,13 +46,22 @@
           "type": "string",
           "title": "Your custom background image",
           "description": "Choose a custom background image for your application"
+        },
+        "backgroundheader": {
+          "type": "string",
+          "title": "Your custom background image",
+          "description": "Choose a custom background image for your application",
+          "format": "color",
+          "default": "#FFFFFF"
         }
       },
       "form": [
         "datasources.brands",
         {
-          "key": "backgroundimage",
-          "type": "text"
+          "key": "backgroundimage"
+        },
+        {
+          "key": "backgroundheader"
         }
       ]
     },

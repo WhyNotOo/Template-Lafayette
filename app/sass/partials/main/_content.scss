@@ -41,10 +41,9 @@ body,
 
 		.brand {
 			position:relative;
-			width:43%;
+			width:44%;
 			float:left;
 			margin:0 4% 4% 0;
-			border:2px dashed #333;
 			padding:2%;
 			cursor:pointer;
 			background:#fff;
@@ -117,7 +116,7 @@ body,
 	#main {
 		#brands {
 			.brand {
-				width:26%;
+				width:27%;
 
 				&:nth-of-type(3n+3) {
 					margin-right:0;
@@ -136,7 +135,7 @@ body,
 	#main {
 		#brands {
 			.brand {
-				width:17%;
+				width:18%;
 
 				&:nth-of-type(4n+4) {
 					margin-right:0;
@@ -155,7 +154,7 @@ body,
 	#main {
 		#brands {
 			.brand {
-				width:12%;
+				width:13%;
 
 				&:nth-of-type(5n+5) {
 					margin-right:0;
