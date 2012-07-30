@@ -20,21 +20,34 @@ var app = {
 	      } else {
 	        $.map(data.entries, function (entry, idx) {
 	          var brand = entry;
-	          $('#brands ul').append('<li class="brand"><img src="'+brand['gsx:image']+'" alt="'+brand.name+'" /><h2>'+brand.name+'</h2></li>')
+	          $('#brands').append('<article class="brand"><p class="img" style="background-image: url('+brand['gsx:image']+');"</p><h2>'+brand.name+'</h2></article>')
 	        });
 	        app.resizeItem();
 	      }
 	    });
 
-	    setTimeout(app.displayBrand, 1000);
+	    setTimeout(app.displayBrand, 2000);
 	  }
   },
 
   displayBrand: function() {
   	$('.loader').addClass('hidden');
   	$('#brands').removeClass('invisible');
-    scroller = new iScroll('brands', { hScroll: false, hideScrollbar: false, scrollbarClass: 'scrollbar' });
-    console.log(scroller);
+    scroller = new iScroll('container', { hScroll: false, hideScrollbar: false, scrollbarClass: 'scrollbar' });
+
+    // for(var i=0; i<100; i++) {
+    //   var test = 0;
+    //   if(i%3 == 0 && i%5 == 0) {
+    //     test = 'FizzBuzz';
+    //   } else if(i%5 == 0) {
+    //     test = 'Buzz';
+    //   } else if(i%3 == 0) {
+    //     test = 'Fizz';
+    //   } else {
+    //     test = i;
+    //   }
+    //   console.log(test);
+    // }
   },
 
   addCustomConfig: function() {

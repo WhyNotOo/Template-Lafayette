@@ -12,15 +12,15 @@ body,
 	width:100%;
 	background:no-repeat center center;
 	background-size:cover;
+	position:relative;
+}
+
+#scroller {
+	position:relative;
+	height:100%;
 }
 
 #main {
-	position:absolute;
-	top:20%;
-	bottom:0;
-	left:0;
-	right:0;
-	height:75%;
 	padding:3% 40px;
 
 	.loader {
@@ -40,7 +40,6 @@ body,
 		}
 
 		.brand {
-			display:block;
 			position:relative;
 			width:43%;
 			float:left;
@@ -50,9 +49,12 @@ body,
 			cursor:pointer;
 			background:#fff;
 
-			img {
+			.img {
 				max-width:100%;
-				height:80%;
+				height:100%;
+				background:#fff no-repeat center center;
+				background-size:contain;
+				margin:0;
 			}
 
 			h2 {
@@ -94,9 +96,8 @@ body,
 	#main {
 		#brands {
 			.brand {
-				img {
+				.img {
 					width:100%;
-					height:100%;
 				}
 
 				&:nth-child(even) {
