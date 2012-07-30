@@ -62,7 +62,7 @@ var app = {
     }
 
     if(options.backgroundheader) {
-      $('.app-header').css('background', options.backgroundheader);
+      $('.app-header').css('background-color', options.backgroundheader);
     }
 
     app.searchBrands();

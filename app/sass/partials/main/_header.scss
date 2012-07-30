@@ -2,9 +2,10 @@
  * Header style
  */
 .app-header {
-	width:100%;
-	height:100px;
-	background:#fff;
+	height:80px;
+	background:#fff url('images/bg_topbar.png') repeat-x;
+	margin-bottom:15px;
+	padding:10px 0;
 
 	.logo {
 		height:100%;
