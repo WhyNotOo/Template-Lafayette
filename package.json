@@ -1,7 +1,7 @@
 {
   "name": "Dashboard Icons",
   "version": "1.0",
-  "fullName": "",
+  "fullName": "Dashboard icons",
   "description": "Add custom description",
   "keywords": [
     "icons",
@@ -49,8 +49,8 @@
         },
         "backgroundheader": {
           "type": "string",
-          "title": "Your custom background image",
-          "description": "Choose a custom background image for your application",
+          "title": "Your custom color for the header",
+          "description": "Choose a custom color for the header (according to your brand logo)",
           "format": "color",
           "default": "#FFFFFF"
         }
