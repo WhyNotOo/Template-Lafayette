@@ -34,20 +34,6 @@ var app = {
   	$('.loader').addClass('hidden');
   	$('#brands').removeClass('invisible');
     scroller = new iScroll('container', { hScroll: false, hideScrollbar: false, scrollbarClass: 'scrollbar' });
-
-    // for(var i=0; i<100; i++) {
-    //   var test = 0;
-    //   if(i%3 == 0 && i%5 == 0) {
-    //     test = 'FizzBuzz';
-    //   } else if(i%5 == 0) {
-    //     test = 'Buzz';
-    //   } else if(i%3 == 0) {
-    //     test = 'Fizz';
-    //   } else {
-    //     test = i;
-    //   }
-    //   console.log(test);
-    // }
   },
 
   addCustomConfig: function() {
@@ -87,6 +73,7 @@ var app = {
 // --- ACTIONS --- \\
 $('.brand').live('click', function() {
   var url = $(this).attr('data-url');
+  window.open(url);
   console.log(url);
 });
 
