@@ -26,7 +26,9 @@ var app = {
 	      }
 	    });
 
-	    setTimeout(app.displayBrand, 2000);
+	    $(window).load(function() {
+        app.displayBrand();
+      });
 	  }
   },
 
@@ -73,8 +75,8 @@ var app = {
 // --- ACTIONS --- \\
 $('.brand').live('click', function() {
   var url = $(this).attr('data-url');
-  window.open(url);
-  console.log(url);
+  if(url)
+    window.open(url);
 });
 
 
