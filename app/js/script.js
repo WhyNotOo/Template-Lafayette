@@ -20,7 +20,7 @@ var app = {
 	      } else {
 	        $.map(data.entries, function (entry, idx) {
 	          var brand = entry;
-	          $('#brands').append('<article class="brand" data-url="'+brand['gsx:url']+'"><p class="img" style="background-image: url('+brand['gsx:image']+');"</p><h2>'+brand.name+'</h2></article>')
+	          $('#brands').append('<article class="brand" data-url="'+brand['gsx:url']+'" onclick=""><p class="img" style="background-image: url('+brand['gsx:image']+');"</p><h2>'+brand.name+'</h2></article>')
 	        });
 	        app.resizeItem();
 	      }
@@ -36,6 +36,13 @@ var app = {
   	$('.loader').addClass('hidden');
   	$('#brands').removeClass('invisible');
     scroller = new iScroll('container', { hScroll: false, hideScrollbar: false, scrollbarClass: 'scrollbar' });
+
+    // --- Open the detailled app of the brand --- \\
+    $('.brand').on('click', function() {
+      var url = $(this).attr('data-url');
+      if(url)
+        window.location.href = url;
+    });
   },
 
   addCustomConfig: function() {
@@ -69,15 +76,6 @@ var app = {
 
 };
 // --- END APP --- \\
-
-
-
-// --- ACTIONS --- \\
-$('.brand').live('click', function() {
-  var url = $(this).attr('data-url');
-  if(url)
-    window.open(url);
-});
 
 
 
