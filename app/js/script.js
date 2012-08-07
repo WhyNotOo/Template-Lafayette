@@ -19,8 +19,8 @@ var app = {
 	        alert('Une erreur est survenue pendant le chargement de l\'application. Merci de recharger la page.');
 	      } else {
 	        $.map(data.entries, function (entry, idx) {
-	          var brand = entry;
-	          $('#brands').append('<article class="brand" data-url="'+brand['gsx:url']+'" onclick=""><p class="img" style="background-image: url('+brand['gsx:image']+');"</p><h2>'+brand.name+'</h2></article>')
+            console.log(entry);
+	          $('#brands').append('<article class="brand" data-url="'+entry.url+'" onclick=""><p class="img" style="background-image: url('+entry.image.contentURL+');"</p></article>')
 	        });
 	        app.resizeItem();
 	      }
