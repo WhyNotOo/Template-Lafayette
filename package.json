@@ -53,8 +53,13 @@
           "description": "Choose a custom color for the header (according to your brand logo)",
           "format": "color",
           "default": "#FFFFFF"
-        },
-        "iconstyle": {
+        }
+      },
+      "form": [
+        "datasources.brands",
+        { "key": "backgroundimage" },
+        { "key": "backgroundheader" },
+        {
           "type": "selectfieldset",
           "title": "Style of icons",
           "description": "Select a style for icons on the Dashboard",
@@ -77,12 +82,6 @@
             }
           ]
         }
-      },
-      "form": [
-        "datasources.brands",
-        { "key": "backgroundimage" },
-        { "key": "backgroundheader" },
-        { "key": "iconstyle" }
       ]
     },
     "libraries": [
