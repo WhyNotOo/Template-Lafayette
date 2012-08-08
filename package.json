@@ -34,7 +34,7 @@
     ],
     "datasources": {
       "brands": {
-        "title": "Brands",
+        "title": "Icons",
         "description": "QTI or spreadsheet. See template description for details.",
         "multiple": false,
         "inputTypeRequired": true
@@ -66,18 +66,22 @@
           "items": [
             {
               "type": "optionfieldset",
+              "name": "basic",
               "legend": "Basic"
             },
             {
               "type": "optionfieldset",
+              "name": "inbox",
               "legend": "Inbox"
             },
             {
               "type": "optionfieldset",
+              "name": "inboxRounded",
               "legend": "Inbox rounded"
             },
             {
               "type": "optionfieldset",
+              "name": "circle",
               "legend": "Circle"
             }
           ]

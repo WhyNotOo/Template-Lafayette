@@ -51,6 +51,8 @@ var app = {
     	$('.app-header .logo').css('background-image', 'url('+Joshfire.factory.config.app.logo.contentURL+')');
     }
 
+    console.log(options);
+
     if(options.backgroundimage) {
     	$('#container').css('background-image', 'url('+options.backgroundimage+')');
     }
