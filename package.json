@@ -53,6 +53,11 @@
           "description": "Choose a custom color for the header (according to your brand logo)",
           "format": "color",
           "default": "#FFFFFF"
+        },
+        "iconstyle": {
+          "type": "string",
+          "title": "Set a style for icons"
+          "enum": ["basic", "inbox", "inboxRounded", "circle"]
         }
       },
       "form": [
@@ -60,32 +65,13 @@
         { "key": "backgroundimage" },
         { "key": "backgroundheader" },
         {
-          "name": "iconstyle",
-          "type": "selectfieldset",
-          "title": "Style of icons",
-          "description": "Select a style for icons on the Dashboard",
-          "items": [
-            {
-              "type": "optionfieldset",
-              "value": "basic",
-              "legend": "Basic"
-            },
-            {
-              "type": "optionfieldset",
-              "value": "inbox",
-              "legend": "Inbox"
-            },
-            {
-              "type": "optionfieldset",
-              "value": "inboxRounded",
-              "legend": "Inbox rounded"
-            },
-            {
-              "type": "optionfieldset",
-              "value": "circle",
-              "legend": "Circle"
-            }
-          ]
+          "key": "iconstyle",
+          "titleMap": {
+            "basic": "Basic",
+            "inbox": "Inbox",
+            "inboxRounded": "Inbox Rounded",
+            "circle": "Circle"
+          }
         }
       ]
     },
