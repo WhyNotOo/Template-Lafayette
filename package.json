@@ -56,7 +56,7 @@
         },
         "iconstyle": {
           "type": "string",
-          "title": "Set a style for icons"
+          "title": "Set a style for icons",
           "enum": ["basic", "inbox", "inboxRounded", "circle"]
         }
       },
