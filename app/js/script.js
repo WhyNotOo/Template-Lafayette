@@ -45,13 +45,13 @@ var app = {
   },
 
   addCustomConfig: function() {
-    if(config.icon) {  }
-
-    if(config.logo) {
-    	$('.app-header .logo').css('background-image', 'url('+Joshfire.factory.config.app.logo.contentURL+')');
+    if(config.icon) {
+      $("head").append('<link rel="apple-touch-icon-precomposed" href="'+ config.icon.contentURL +'"><link rel="shortcut icon" href="'+ config.icon.contentURL +'">');
     }
 
-    console.log(options);
+    if(config.logo) {
+    	$('.app-header .logo').css('background-image', 'url('+config.logo.contentURL+')');
+    }
 
     if(options.backgroundimage) {
     	$('#container').css('background-image', 'url('+options.backgroundimage+')');

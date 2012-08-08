@@ -2,19 +2,19 @@
   "name": "Dashboard Icons",
   "version": "1.0",
   "fullName": "Dashboard icons",
-  "description": "Add custom description",
+  "description": "Display your item in a simple dashboard menu icon template",
   "keywords": [
+    "dashboard",
     "icons",
-    "brands",
-    "shopping"
+    "menu"
   ],
   "author": {
     "name": "Joshfire"
   },
   "joshfire": {
     "images": {
-      "small": "marketing/logo_small.jpg",
-      "big": "marketing/logo_big.jpg"
+      "small": "marketing/logo-small.png",
+      "big": "marketing/logo-big.png"
     },
     "premium": false,
     "devices": [
@@ -25,11 +25,12 @@
         ],
         "startfile": "app/index.html",
         "orientation": "auto",
-        "images": "marketing/index.png",
+        "images": "marketing/screen-mk2.png",
         "screenshots": [
-          "marketing/index.png"
+          "marketing/screen-mk2.png"
+          "marketing/screen-mk2-large.png"
         ],
-        "disablePreview": true
+        "disablePreview": false
       }
     ],
     "datasources": {
