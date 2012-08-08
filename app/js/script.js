@@ -4,7 +4,7 @@
 
 (function ($) {
 
-var config = Joshfire.factory.config.app,
+var config  = Joshfire.factory.config.app,
 		options = Joshfire.factory.config.template.options || {},
   	brands  = Joshfire.factory.getDataSource("brands"),
   	scroller, iconstyle;
@@ -19,7 +19,7 @@ var app = {
 	        alert('Une erreur est survenue pendant le chargement de l\'application. Merci de recharger la page.');
 	      } else {
 	        $.map(data.entries, function (entry, idx) {
-	          $('#brands').append('<article class="brand '+iconstyle+'" data-url="'+entry.url+'" onclick=""><p class="img" style="background-image: url('+entry.image.contentURL+');"</p></article>')
+	          $('#brands').append('<article class="brand inbox" data-url="'+entry.url+'" onclick=""><p class="img" style="background-image: url('+entry.image.contentURL+');"</p></article>')
 	        });
 	        app.resizeItem();
 	      }

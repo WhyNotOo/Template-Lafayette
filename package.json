@@ -66,22 +66,22 @@
           "items": [
             {
               "type": "optionfieldset",
-              "name": "basic",
+              "value": "basic",
               "legend": "Basic"
             },
             {
               "type": "optionfieldset",
-              "name": "inbox",
+              "value": "inbox",
               "legend": "Inbox"
             },
             {
               "type": "optionfieldset",
-              "name": "inboxRounded",
+              "value": "inboxRounded",
               "legend": "Inbox rounded"
             },
             {
               "type": "optionfieldset",
-              "name": "circle",
+              "value": "circle",
               "legend": "Circle"
             }
           ]
