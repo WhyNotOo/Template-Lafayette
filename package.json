@@ -53,16 +53,36 @@
           "description": "Choose a custom color for the header (according to your brand logo)",
           "format": "color",
           "default": "#FFFFFF"
+        },
+        "iconstyle": {
+          "type": "selectfieldset",
+          "title": "Style of icons",
+          "description": "Select a style for icons on the Dashboard",
+          "items": [
+            {
+              "type": "optionfieldset",
+              "legend": "Basic"
+            },
+            {
+              "type": "optionfieldset",
+              "legend": "Inbox"
+            },
+            {
+              "type": "optionfieldset",
+              "legend": "Inbox rounded"
+            },
+            {
+              "type": "optionfieldset",
+              "legend": "Circle"
+            }
+          ]
         }
       },
       "form": [
         "datasources.brands",
-        {
-          "key": "backgroundimage"
-        },
-        {
-          "key": "backgroundheader"
-        }
+        { "key": "backgroundimage" },
+        { "key": "backgroundheader" },
+        { "key": "iconstyle" }
       ]
     },
     "libraries": [

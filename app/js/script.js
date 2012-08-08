@@ -7,7 +7,7 @@
 var config = Joshfire.factory.config.app,
 		options = Joshfire.factory.config.template.options || {},
   	brands  = Joshfire.factory.getDataSource("brands"),
-  	scroller;
+  	scroller, iconstyle;
 
 var app = {
 
@@ -19,8 +19,7 @@ var app = {
 	        alert('Une erreur est survenue pendant le chargement de l\'application. Merci de recharger la page.');
 	      } else {
 	        $.map(data.entries, function (entry, idx) {
-            console.log(entry);
-	          $('#brands').append('<article class="brand" data-url="'+entry.url+'" onclick=""><p class="img" style="background-image: url('+entry.image.contentURL+');"</p></article>')
+	          $('#brands').append('<article class="brand '+iconstyle+'" data-url="'+entry.url+'" onclick=""><p class="img" style="background-image: url('+entry.image.contentURL+');"</p></article>')
 	        });
 	        app.resizeItem();
 	      }
@@ -60,6 +59,10 @@ var app = {
       $('.app-header').css('background-color', options.backgroundheader);
     }
 
+    if(options.iconstyle) {
+      iconstyle = options.iconstyle || 'basic';
+    }
+
     app.searchBrands();
   },
 
@@ -69,8 +72,7 @@ var app = {
   },
 
   onResize: function() {
-		var brandW = $('.brand').width();
-		$('.brand').height(brandW+'px');
+		app.resizeItem();
 		scroller.refresh();
   }
 
