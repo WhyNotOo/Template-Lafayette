@@ -60,6 +60,7 @@
         { "key": "backgroundimage" },
         { "key": "backgroundheader" },
         {
+          "name": "iconstyle",
           "type": "selectfieldset",
           "title": "Style of icons",
           "description": "Select a style for icons on the Dashboard",
