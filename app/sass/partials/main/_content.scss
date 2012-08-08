@@ -112,7 +112,7 @@ body,
 }
 
 /* Tablets Portrait & Big Smartphone Landscape */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 601px) and (max-width: 959px) {
 	#main {
 		#brands {
 			.brand {
@@ -136,7 +136,7 @@ body,
 }
 
 /* Tablets landscape & desktops */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 960px) {
 	#main {
 		#brands {
 			.brand {
