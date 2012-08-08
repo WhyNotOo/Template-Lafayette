@@ -32,7 +32,7 @@ var app = {
   },
 
   displayBrand: function() {
-  	$('.loader').addClass('hidden');
+  	$('#loader').addClass('hidden');
   	$('#brands').removeClass('invisible');
     scroller = new iScroll('container', { hScroll: false, hideScrollbar: false, scrollbarClass: 'scrollbar' });
 
@@ -45,6 +45,14 @@ var app = {
   },
 
   addCustomConfig: function() {
+    var cl = new CanvasLoader('loader');
+    cl.setShape('spiral');
+    cl.setDiameter(50);
+    cl.setDensity(43);
+    cl.setRange(0.9);
+    cl.setFPS(27);
+    cl.show();
+
     if(config.icon) {
       $("head").append('<link rel="apple-touch-icon-precomposed" href="'+ config.icon.contentURL +'"><link rel="shortcut icon" href="'+ config.icon.contentURL +'">');
     }

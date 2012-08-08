@@ -23,11 +23,10 @@ body,
 #main {
 	padding:3% 40px;
 
-	.loader {
+	#loader {
 		margin:50px auto 0 auto;
-		width:40px;
-		height:40px;
-		background:url('images/loader.gif') no-repeat center center;
+		width:50px;
+		height:50px;
 	}
 
 	#brands {
@@ -113,7 +112,7 @@ body,
 }
 
 /* Tablets Portrait & Big Smartphone Landscape */
-@media screen and (min-width: 600px) and (max-width: 767px) {
+@media screen and (min-width: 600px) and (max-width: 767px) and (orientation:portrait) {
 	#main {
 		#brands {
 			.brand {
