@@ -27,7 +27,7 @@
         "orientation": "auto",
         "images": "marketing/screen-mk2.png",
         "screenshots": [
-          "marketing/screen-mk2.png"
+          "marketing/screen-mk2.png",
           "marketing/screen-mk2-large.png"
         ],
         "disablePreview": false
