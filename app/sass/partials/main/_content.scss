@@ -112,7 +112,7 @@ body,
 }
 
 /* Tablets Portrait & Big Smartphone Landscape */
-@media screen and (min-width: 600px) and (max-width: 767px) and (orientation:portrait) {
+@media screen and (min-width: 601px) and (max-width: 1024px) {
 	#main {
 		#brands {
 			.brand {
@@ -135,8 +135,8 @@ body,
 	}
 }
 
-/* iPad & Tablets*/
-@media screen and (min-width: 768px) and (max-width: 959px) {
+/* Tablets landscape & desktops */
+@media screen and (min-width: 1025px) {
 	#main {
 		#brands {
 			.brand {
@@ -153,31 +153,6 @@ body,
 
 				h2 {
 					font-size:20px;
-				}
-			}
-		}
-	}
-}
-
-/* Display larger than tablet */
-@media screen and (min-width: 959px) {
-	#main {
-		#brands {
-			.brand {
-				width:16%;
-				margin:0 5% 5% 0;
-
-				&.inbox, &.inboxRounded {
-					width:14%;
-					padding:1%;
-				}
-
-				&:nth-of-type(5n+5) {
-					margin-right:0;
-				}
-
-				h2 {
-					font-size:22px;
 				}
 			}
 		}
