@@ -53,8 +53,12 @@ var app = {
     cl.setFPS(27);
     cl.show();
 
+    if(config.name) {
+      $('title').html(config.name);
+    }
+
     if(config.icon) {
-      $("head").append('<link rel="apple-touch-icon-precomposed" href="'+ config.icon.contentURL +'"><link rel="shortcut icon" href="'+ config.icon.contentURL +'">');
+      $('head').append('<link rel="apple-touch-icon-precomposed" href="'+ config.icon.contentURL +'"><link rel="shortcut icon" href="'+ config.icon.contentURL +'">');
     }
 
     if(config.logo) {
